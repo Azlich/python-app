@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app
+  labels:
+    app: flask-api # label name
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-api # label name
+  template:
+    metadata:
+      labels:
+        app: flask-api # label name
+    spec:
+      containers:
+      - name: python-app
+        image: azlich/python-app:v1 # image name on registry
+        ports:
+        - containerPort: 5000 # port inside container
