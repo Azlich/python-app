@@ -12,7 +12,7 @@ def details():
         {
             "time": datetime.today().strftime("%I:%M:%S %p on %B %d, %Y"),
             "hostname": socket.gethostname(),
-            "message": "Hello, World!!",
+            "message": "Hello, World!",
         }
     )
 
